@@ -118,7 +118,7 @@
   .orb-1 {
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.45) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 168, 83, 0.35) 0%, transparent 70%);
     top: -200px;
     left: -150px;
     animation-delay: 0.2s, 0s;
@@ -128,7 +128,7 @@
   .orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 106, 79, 0.3) 0%, transparent 70%);
     bottom: -100px;
     right: -100px;
     animation-delay: 0.5s, -4s;
@@ -138,7 +138,7 @@
   .orb-3 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(116, 198, 157, 0.2) 0%, transparent 70%);
     top: 40%;
     left: 60%;
     animation-delay: 0.8s, -7s;
@@ -192,12 +192,12 @@
     align-items: center;
     gap: 8px;
     padding: 7px 16px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: rgba(212, 168, 83, 0.1);
+    border: 1px solid rgba(212, 168, 83, 0.3);
     border-radius: 100px;
     font-size: 13px;
     font-weight: 600;
-    color: #93c5fd;
+    color: #e8c06a;
     margin-bottom: 32px;
     animation: badge-glow 3s ease-in-out infinite;
   }
@@ -205,19 +205,19 @@
   .badge-dot {
     width: 7px;
     height: 7px;
-    background: #3b82f6;
+    background: #d4a853;
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
   @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
-    50% { box-shadow: 0 0 0 5px rgba(59, 130, 246, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 83, 0.6); }
+    50% { box-shadow: 0 0 0 5px rgba(212, 168, 83, 0); }
   }
 
   @keyframes badge-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.1); }
-    50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.25); }
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.1); }
+    50% { box-shadow: 0 0 30px rgba(212, 168, 83, 0.25); }
   }
 
   /* ---- 헤드라인 ---- */
@@ -260,12 +260,12 @@
     font-weight: 700;
     border-radius: 100px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 40px rgba(212, 168, 83, 0.25);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 40px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 8px 40px rgba(212, 168, 83, 0.45);
   }
 
   .btn-secondary {
@@ -318,7 +318,7 @@
   .trust-unit {
     font-size: 16px;
     font-weight: 600;
-    color: var(--blue-light);
+    color: var(--blue-light); /* --blue-light은 이제 앰버(#e8c06a) */
   }
 
   .trust-label {

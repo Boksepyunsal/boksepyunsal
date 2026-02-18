@@ -1,73 +1,6 @@
 <script>
   import { reveal } from '$lib/actions/reveal.js';
-
-  const projects = [
-    {
-      id: 1,
-      name: 'GS풍력발전 SaaS 플랫폼',
-      client: 'GS (대기업)',
-      desc: 'GS 대기업의 풍력발전 설비 데이터를 실시간으로 수집·분석·시각화하는 엔터프라이즈 SaaS 플랫폼. 수천 개 센서의 데이터를 처리하는 고성능 파이프라인 구축.',
-      tags: ['AWS', 'Next.js', 'Spring Boot', 'Real-time', 'SaaS'],
-      gradient: 'linear-gradient(135deg, #059669 0%, #0d9488 100%)',
-      icon: `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-      </svg>`,
-      size: 'large',
-    },
-    {
-      id: 2,
-      name: '사내 업무 지원 생성형 AI 챗봇',
-      client: '기업 내부용',
-      desc: 'GPT 기반 내부 문서 검색·요약 및 업무 자동화 챗봇. RAG 아키텍처로 사내 지식베이스를 학습해 업무 효율 극대화.',
-      tags: ['GPT-4', 'RAG', 'Node.js', 'PostgreSQL'],
-      gradient: 'linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)',
-      icon: `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-        <circle cx="9" cy="10" r="1" fill="currentColor"/>
-        <circle cx="12" cy="10" r="1" fill="currentColor"/>
-        <circle cx="15" cy="10" r="1" fill="currentColor"/>
-      </svg>`,
-      size: 'medium',
-    },
-    {
-      id: 3,
-      name: '공구모아',
-      client: 'Gong-gu-mo-a',
-      desc: '소상공인 대상 위치 기반 공구·장비 대여 플랫폼. 근처의 여유 장비를 찾고 빌려 쓰는 공유경제 서비스.',
-      tags: ['Flutter', 'Firebase', 'Google Maps'],
-      gradient: 'linear-gradient(135deg, #d97706 0%, #dc2626 100%)',
-      icon: `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-      </svg>`,
-      size: 'medium',
-    },
-    {
-      id: 4,
-      name: 'BARO',
-      client: '영양 관리 플랫폼',
-      desc: '바코드·NFC 자동인식으로 식품 정보를 즉시 분석하고, AI가 개인 맞춤 영양 계획을 제안하는 헬스케어 앱.',
-      tags: ['Flutter', 'Python', 'AI/ML', 'NFC'],
-      gradient: 'linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%)',
-      icon: `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-      </svg>`,
-      size: 'medium',
-    },
-    {
-      id: 5,
-      name: 'BOKSE AI 챗봇',
-      client: 'Demo',
-      desc: '내 노션, 깃허브, 기술 블로그 데이터를 학습해 나를 대신해 답변하는 개인 맞춤형 AI 어시스턴트 데모.',
-      tags: ['LangChain', 'OpenAI', 'Svelte', 'RAG'],
-      gradient: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
-      icon: `<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="12" cy="8" r="5"/>
-        <path d="M12 2v1M12 13v1M4.22 10H3M21 10h-1.22M6.34 5.34l-.71-.71M18.37 5.34l.71-.71M6.34 14.66l-.71.71M18.37 14.66l.71.71"/>
-        <path d="M8 21l2-5h4l2 5"/>
-      </svg>`,
-      size: 'large',
-    },
-  ];
+  import { projects } from '$lib/data/projects.js';
 </script>
 
 <section id="portfolio">
@@ -80,8 +13,9 @@
 
     <div class="portfolio-grid">
       {#each projects as project, i}
-        <div
+        <a
           class="project-card {project.size}"
+          href="/projects/{project.slug}"
           use:reveal={{ delay: i * 80 }}
           style="--gradient: {project.gradient}"
         >
@@ -102,8 +36,9 @@
                 <span class="tag">{tag}</span>
               {/each}
             </div>
+            <span class="detail-link">자세히 보기 →</span>
           </div>
-        </div>
+        </a>
       {/each}
     </div>
   </div>
@@ -136,7 +71,9 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
-    cursor: default;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
 
   .project-card:hover {
@@ -260,6 +197,19 @@
     font-weight: 600;
     color: var(--text-secondary);
     font-family: 'SF Mono', 'Fira Code', monospace;
+  }
+
+  .detail-link {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s;
+  }
+
+  .project-card:hover .detail-link {
+    color: var(--text-secondary);
   }
 
   @media (max-width: 900px) {

@@ -1,14 +1,17 @@
 <script>
   import { onMount } from 'svelte';
+  import { page } from '$app/stores';
 
   let scrolled = false;
   let menuOpen = false;
 
+  $: isProjectPage = $page.url.pathname.startsWith('/projects/');
+
   const links = [
-    { label: '서비스', href: '#services' },
-    { label: '포트폴리오', href: '#portfolio' },
-    { label: '프로세스', href: '#process' },
-    { label: '기술 스택', href: '#techstack' },
+    { label: '서비스', href: '/#services' },
+    { label: '포트폴리오', href: '/#portfolio' },
+    { label: '프로세스', href: '/#process' },
+    { label: '기술 스택', href: '/#techstack' },
   ];
 
   onMount(() => {
@@ -31,17 +34,26 @@
 <nav class:scrolled>
   <div class="nav-inner container">
     <a href="/" class="logo" on:click={closeMenu}>
-      <span class="logo-icon">B</span>
+      <img src="/logo.png" alt="복세편살 로고" class="logo-img" />
       <span class="logo-text">복세편살</span>
     </a>
 
-    <ul class="nav-links">
-      {#each links as link}
-        <li><a href={link.href}>{link.label}</a></li>
-      {/each}
-    </ul>
+    {#if isProjectPage}
+      <a href="/#portfolio" class="back-btn" data-sveltekit-reload>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        메인으로
+      </a>
+    {:else}
+      <ul class="nav-links">
+        {#each links as link}
+          <li><a href={link.href}>{link.label}</a></li>
+        {/each}
+      </ul>
+    {/if}
 
-    <a href="#contact" class="cta-btn">무료 견적 받기</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="cta-btn" target="_blank" rel="noopener">무료 견적 받기</a>
 
     <button class="hamburger" on:click={toggleMenu} aria-label="메뉴">
       <span class:open={menuOpen}></span>
@@ -54,11 +66,15 @@
 {#if menuOpen}
   <div class="mobile-menu">
     <ul>
-      {#each links as link}
-        <li><a href={link.href} on:click={closeMenu}>{link.label}</a></li>
-      {/each}
+      {#if isProjectPage}
+        <li><a href="/#portfolio" on:click={closeMenu}>← 메인으로</a></li>
+      {:else}
+        {#each links as link}
+          <li><a href={link.href} on:click={closeMenu}>{link.label}</a></li>
+        {/each}
+      {/if}
       <li>
-        <a href="#contact" class="mobile-cta" on:click={closeMenu}>무료 견적 받기</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="mobile-cta" target="_blank" rel="noopener" on:click={closeMenu}>무료 견적 받기</a>
       </li>
     </ul>
   </div>
@@ -97,17 +113,12 @@
     flex-shrink: 0;
   }
 
-  .logo-icon {
+  .logo-img {
     width: 34px;
     height: 34px;
-    background: var(--gradient);
     border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: 900;
-    color: white;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .logo-text {
@@ -115,6 +126,24 @@
     font-weight: 700;
     color: var(--text);
     letter-spacing: -0.02em;
+  }
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .back-btn:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .nav-links {

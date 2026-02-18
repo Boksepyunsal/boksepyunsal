@@ -36,15 +36,18 @@
             </div>
           </a>
 
-          <a href="tel:010-7708-6449" class="contact-card">
-            <div class="card-icon phone-icon">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="contact-card" target="_blank" rel="noopener">
+            <div class="card-icon form-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 .18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
               </svg>
             </div>
             <div>
-              <span class="contact-label">전화 / 문자</span>
-              <span class="contact-value">010-7708-6449</span>
+              <span class="contact-label">견적 문의 (구글폼)</span>
+              <span class="contact-value">무료 견적 요청하기</span>
             </div>
             <div class="card-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -85,7 +88,7 @@
         </div>
 
         <!-- 메인 CTA -->
-        <a href="mailto:boksepyunsal24@gmail.com" class="main-cta" target="_blank" rel="noopener">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="main-cta" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
           </svg>
@@ -122,7 +125,7 @@
   .orb-1 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 168, 83, 0.25) 0%, transparent 70%);
     top: -100px;
     left: -100px;
     animation: float-c1 10s ease-in-out infinite;
@@ -131,7 +134,7 @@
   .orb-2 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(45, 106, 79, 0.2) 0%, transparent 70%);
     bottom: -80px;
     right: -60px;
     animation: float-c2 12s ease-in-out infinite;
@@ -203,10 +206,10 @@
     flex-shrink: 0;
   }
 
-  .email-icon { background: rgba(59, 130, 246, 0.15); color: var(--blue-light); }
-  .phone-icon { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+  .email-icon { background: rgba(212, 168, 83, 0.15); color: var(--blue-light); }
+  .form-icon { background: rgba(45, 106, 79, 0.15); color: var(--purple-light); }
   .kakao-icon { background: rgba(254, 229, 0, 0.15); color: #fde047; }
-  .location-icon { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+  .location-icon { background: rgba(212, 168, 83, 0.1); color: var(--blue-light); }
 
   .contact-label {
     display: block;
@@ -242,13 +245,13 @@
     font-weight: 700;
     border-radius: 100px;
     transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
-    box-shadow: 0 0 60px rgba(59, 130, 246, 0.35);
+    box-shadow: 0 0 60px rgba(212, 168, 83, 0.25);
     margin-bottom: 16px;
   }
 
   .main-cta:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 60px rgba(59, 130, 246, 0.55);
+    box-shadow: 0 12px 60px rgba(212, 168, 83, 0.4);
   }
 
   .cta-note {

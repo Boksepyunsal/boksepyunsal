@@ -7,7 +7,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">
-          <span class="logo-icon">B</span>
+          <img src="/logo.png" alt="복세편살 로고" class="logo-img" />
           <span class="logo-text">복세편살</span>
         </div>
         <p class="brand-desc">
@@ -37,7 +37,7 @@
           <h4>연락처</h4>
           <ul>
             <li><a href="mailto:boksepyunsal24@gmail.com">이메일</a></li>
-            <li><a href="tel:010-7708-6449">010-7708-6449</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" target="_blank" rel="noopener">견적 문의</a></li>
             <li><a href="#contact">카카오톡</a></li>
           </ul>
         </div>
@@ -85,17 +85,12 @@
     margin-bottom: 16px;
   }
 
-  .logo-icon {
+  .logo-img {
     width: 32px;
     height: 32px;
-    background: var(--gradient);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 900;
-    color: white;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .logo-text {
