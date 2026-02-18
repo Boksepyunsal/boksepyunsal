@@ -56,7 +56,7 @@
             </div>
           </a>
 
-          <a href="https://open.kakao.com" class="contact-card kakao" target="_blank" rel="noopener">
+          <a href="https://open.kakao.com/o/sRJ0h5Fg" class="contact-card kakao" target="_blank" rel="noopener">
             <div class="card-icon kakao-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.7 1.68 5.07 4.2 6.48l-.96 3.6 4.2-2.76c.84.12 1.68.18 2.56.18 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/>

@@ -64,7 +64,7 @@
           <ul>
             <li><a href="mailto:boksepyunsal24@gmail.com">이메일</a></li>
             <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" target="_blank" rel="noopener">견적 문의</a></li>
-            <li><a href="#contact">카카오톡</a></li>
+            <li><a href="https://open.kakao.com/o/sRJ0h5Fg" target="_blank" rel="noopener">카카오톡</a></li>
           </ul>
         </div>
       </div>
