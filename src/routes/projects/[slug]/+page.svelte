@@ -19,7 +19,7 @@
   <section class="hero" style="--gradient: {project.gradient}">
     <div class="hero-bg"></div>
     <div class="container">
-      <a href="/#portfolio" class="back-link" data-sveltekit-reload>
+      <a href="/#portfolio" class="back-link" on:click|preventDefault={() => { window.location.href = '/#portfolio'; }}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="15 18 9 12 15 6"/>
         </svg>
@@ -282,7 +282,7 @@
   .client-badge {
     display: inline-block;
     padding: 5px 14px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(100, 72, 46, 0.08);
     border: 1px solid var(--border);
     border-radius: 100px;
     font-size: 13px;
@@ -526,7 +526,7 @@
 
   .tech-tag {
     padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(100, 72, 46, 0.06);
     border: 1px solid var(--border);
     border-radius: 6px;
     font-size: 12px;

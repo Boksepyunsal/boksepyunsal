@@ -144,7 +144,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(100, 72, 46, 0.06);
     border: 1px solid var(--border);
     border-radius: 9px;
     color: var(--text-muted);
@@ -153,7 +153,7 @@
 
   .social-btn:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(100, 72, 46, 0.12);
     border-color: var(--border-hover);
     transform: translateY(-2px);
   }

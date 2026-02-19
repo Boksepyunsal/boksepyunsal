@@ -118,7 +118,7 @@
   .orb-1 {
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(212, 168, 83, 0.35) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(217, 119, 87, 0.22) 0%, transparent 70%);
     top: -200px;
     left: -150px;
     animation-delay: 0.2s, 0s;
@@ -128,7 +128,7 @@
   .orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(45, 106, 79, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(196, 90, 53, 0.14) 0%, transparent 70%);
     bottom: -100px;
     right: -100px;
     animation-delay: 0.5s, -4s;
@@ -138,7 +138,7 @@
   .orb-3 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(116, 198, 157, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(230, 185, 140, 0.18) 0%, transparent 70%);
     top: 40%;
     left: 60%;
     animation-delay: 0.8s, -7s;
@@ -160,8 +160,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      linear-gradient(rgba(100, 72, 46, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 72, 46, 0.06) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
     pointer-events: none;
@@ -192,12 +192,12 @@
     align-items: center;
     gap: 8px;
     padding: 7px 16px;
-    background: rgba(212, 168, 83, 0.1);
-    border: 1px solid rgba(212, 168, 83, 0.3);
+    background: rgba(217, 119, 87, 0.10);
+    border: 1px solid rgba(217, 119, 87, 0.28);
     border-radius: 100px;
     font-size: 13px;
     font-weight: 600;
-    color: #e8c06a;
+    color: #C45A35;
     margin-bottom: 32px;
     animation: badge-glow 3s ease-in-out infinite;
   }
@@ -205,19 +205,19 @@
   .badge-dot {
     width: 7px;
     height: 7px;
-    background: #d4a853;
+    background: #D97757;
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
   @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 168, 83, 0.6); }
-    50% { box-shadow: 0 0 0 5px rgba(212, 168, 83, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(217, 119, 87, 0.6); }
+    50% { box-shadow: 0 0 0 5px rgba(217, 119, 87, 0); }
   }
 
   @keyframes badge-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(212, 168, 83, 0.1); }
-    50% { box-shadow: 0 0 30px rgba(212, 168, 83, 0.25); }
+    0%, 100% { box-shadow: 0 0 20px rgba(217, 119, 87, 0.08); }
+    50% { box-shadow: 0 0 30px rgba(217, 119, 87, 0.20); }
   }
 
   /* ---- 헤드라인 ---- */
@@ -260,12 +260,12 @@
     font-weight: 700;
     border-radius: 100px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 40px rgba(212, 168, 83, 0.25);
+    box-shadow: 0 0 40px rgba(217, 119, 87, 0.25);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 40px rgba(212, 168, 83, 0.45);
+    box-shadow: 0 8px 40px rgba(217, 119, 87, 0.40);
   }
 
   .btn-secondary {
@@ -273,7 +273,7 @@
     align-items: center;
     gap: 8px;
     padding: 15px 24px;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(100, 72, 46, 0.07);
     border: 1px solid var(--border-hover);
     color: var(--text);
     font-size: 15px;
@@ -283,8 +283,8 @@
   }
 
   .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(100, 72, 46, 0.12);
+    border-color: rgba(100, 72, 46, 0.30);
     transform: translateY(-2px);
   }
 
@@ -294,7 +294,7 @@
     align-items: center;
     gap: 32px;
     padding: 24px 40px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.55);
     border: 1px solid var(--border);
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -350,7 +350,7 @@
   .scroll-mouse {
     width: 24px;
     height: 38px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(100, 72, 46, 0.25);
     border-radius: 12px;
     display: flex;
     align-items: flex-start;
@@ -361,7 +361,7 @@
   .scroll-wheel {
     width: 3px;
     height: 8px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(100, 72, 46, 0.40);
     border-radius: 2px;
     animation: scroll-wheel 2s ease-in-out infinite;
   }

@@ -39,7 +39,7 @@
     </a>
 
     {#if isProjectPage}
-      <a href="/#portfolio" class="back-btn" data-sveltekit-reload>
+      <a href="/#portfolio" class="back-btn" on:click|preventDefault={() => { window.location.href = '/#portfolio'; }}>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="15 18 9 12 15 6"/>
         </svg>
@@ -67,7 +67,7 @@
   <div class="mobile-menu">
     <ul>
       {#if isProjectPage}
-        <li><a href="/#portfolio" on:click={closeMenu}>← 메인으로</a></li>
+        <li><a href="/#portfolio" on:click|preventDefault={() => { closeMenu(); window.location.href = '/#portfolio'; }}>← 메인으로</a></li>
       {:else}
         {#each links as link}
           <li><a href={link.href} on:click={closeMenu}>{link.label}</a></li>
@@ -93,7 +93,7 @@
   }
 
   nav.scrolled {
-    background: rgba(5, 5, 10, 0.85);
+    background: rgba(250, 247, 242, 0.90);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-color: var(--border);
@@ -143,7 +143,7 @@
 
   .back-btn:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(100, 72, 46, 0.08);
   }
 
   .nav-links {
@@ -164,7 +164,7 @@
 
   .nav-links a:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(100, 72, 46, 0.08);
   }
 
   .cta-btn {
@@ -182,7 +182,7 @@
   .cta-btn:hover {
     opacity: 0.9;
     transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+    box-shadow: 0 8px 24px rgba(217, 119, 87, 0.35);
   }
 
   .hamburger {
@@ -216,7 +216,7 @@
     left: 0;
     right: 0;
     z-index: 99;
-    background: rgba(5, 5, 10, 0.98);
+    background: rgba(250, 247, 242, 0.98);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     animation: slideDown 0.25s ease;
@@ -247,7 +247,7 @@
 
   .mobile-menu a:hover {
     color: var(--text);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(100, 72, 46, 0.07);
   }
 
   .mobile-cta {

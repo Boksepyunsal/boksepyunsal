@@ -7,29 +7,29 @@
 }
 
 :root {
-  --bg: #080907;
-  --surface: #0e100c;
-  --surface-2: #141710;
-  --surface-3: #1b1f16;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-hover: rgba(255, 255, 255, 0.14);
+  --bg: #FAF7F2;
+  --surface: #F2EBE0;
+  --surface-2: #EAE1D3;
+  --surface-3: #E0D5C4;
+  --border: rgba(100, 72, 46, 0.10);
+  --border-hover: rgba(100, 72, 46, 0.20);
 
-  /* 브랜드 컬러 — 아이콘 기반: 웜 앰버 + 포레스트 그린 */
-  --blue: #d4a853;
-  --blue-light: #e8c06a;
-  --purple: #2d6a4f;
-  --purple-light: #52b788;
-  --pink: #c17b2e;
-  --cyan: #40916c;
-  --green: #74c69d;
+  /* 브랜드 컬러 — Anthropic 스타일 웜 코럴 팔레트 */
+  --blue: #C96742;
+  --blue-light: #D97757;
+  --purple: #9B6255;
+  --purple-light: #B5826E;
+  --pink: #C4503A;
+  --cyan: #B07545;
+  --green: #C89B70;
 
-  --gradient: linear-gradient(135deg, #d4a853 0%, #2d6a4f 100%);
-  --gradient-text: linear-gradient(135deg, #e8c06a 0%, #74c69d 50%, #d4a853 100%);
-  --gradient-glow: linear-gradient(135deg, rgba(212, 168, 83, 0.3), rgba(45, 106, 79, 0.3));
+  --gradient: linear-gradient(135deg, #D97757 0%, #C45A35 100%);
+  --gradient-text: linear-gradient(135deg, #C45A35 0%, #8B4513 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(217, 119, 87, 0.18), rgba(196, 90, 53, 0.18));
 
-  --text: #f1f0ea;
-  --text-secondary: #a09e96;
-  --text-muted: #5c5a52;
+  --text: #1C1714;
+  --text-secondary: #5C4A40;
+  --text-muted: #9B8070;
 
   --radius-sm: 10px;
   --radius: 16px;
@@ -53,7 +53,7 @@ body {
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.35);
+  background: rgba(217, 119, 87, 0.28);
   color: var(--text);
 }
 
@@ -66,6 +66,10 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--surface-3);
   border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
 }
 
 a {
@@ -103,8 +107,8 @@ img {
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(217, 119, 87, 0.10);
+  border: 1px solid rgba(217, 119, 87, 0.25);
   border-radius: 100px;
   font-size: 13px;
   font-weight: 600;
