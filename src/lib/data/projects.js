@@ -230,6 +230,10 @@ HR, 법무, 재무 등 부서별로 문서 시스템이 달라 통합 검색 자
     </svg>`,
     size: 'medium',
     images: ['/images/projects/baro_p1_0.jpeg', '/images/projects/baro_p2_0.jpeg'],
+    links: [
+      { label: 'App Store', href: 'https://apps.apple.com/us/app/%ED%94%BC%ED%8A%B8%EB%B9%84/id6736431755' },
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.purplemoonpjt.baro' },
+    ],
 
     overview: '"당신을 위한 건강 영양 비서" FitB는 칼로리 목표 설정, 식단 기록, 영양 분석, 커뮤니티를 하나의 앱에서 제공하는 헬스케어 플랫폼입니다. Flutter BLoC 기반 모바일 앱과 Spring Boot GraphQL 서버를 Terraform + AWS로 배포하고, App Store·Google Play에 출시했습니다.',
 
@@ -285,6 +289,7 @@ Google/Apple 소셜 로그인으로 진입 장벽을 낮추고, graphql_flutter�
     </svg>`,
     size: 'large',
     images: ['/images/projects/bokse-ai_p1_0.jpeg'],
+    links: [{ label: '데모 사이트', href: 'https://bokse.xyz/' }],
 
     overview: '기업 내부 문서(PDF·XLS·DOC)를 업로드하면 AI가 즉시 학습해 자연어 질의응답을 제공하는 RAG SaaS입니다. 단 하루 만에 구축해 클라이언트 미팅에서 즉석 데모로 활용하며, 기업 데이터가 외부 서버를 거치지 않는 데이터 주권 아키텍처를 채택했습니다.',
 

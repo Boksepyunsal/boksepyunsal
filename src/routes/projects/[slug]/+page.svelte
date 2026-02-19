@@ -47,6 +47,20 @@
             {project.role}
           </span>
         </div>
+        {#if project.links && project.links.length > 0}
+        <div class="hero-links">
+          {#each project.links as link}
+            <a href={link.href} class="hero-link" target="_blank" rel="noopener noreferrer" style="--link-gradient: {project.gradient}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              {link.label}
+            </a>
+          {/each}
+        </div>
+        {/if}
       </div>
     </div>
   </section>
@@ -64,6 +78,21 @@
       </div>
     </div>
   </section>
+
+  <!-- Images Gallery -->
+  {#if project.images && project.images.length > 0}
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid" use:reveal>
+        {#each project.images as img, i}
+          <div class="gallery-item">
+            <img src={img} alt="{project.name} 스크린샷 {i + 1}" loading={i === 0 ? 'eager' : 'lazy'} />
+          </div>
+        {/each}
+      </div>
+    </div>
+  </section>
+  {/if}
 
   <!-- Problem -->
   <section class="content-section">
@@ -297,6 +326,34 @@
     color: var(--text-muted);
   }
 
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .hero-link:hover {
+    background: var(--link-gradient);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-1px);
+  }
+
   /* Stats */
   .stats-section {
     padding: 40px 0 60px;
@@ -330,6 +387,37 @@
     font-size: 13px;
     color: var(--text-muted);
     font-weight: 500;
+  }
+
+  /* Gallery */
+  .gallery-section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    width: 100%;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.01);
   }
 
   /* Content Sections */
