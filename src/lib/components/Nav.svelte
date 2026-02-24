@@ -53,7 +53,7 @@
       </ul>
     {/if}
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="cta-btn" target="_blank" rel="noopener">무료 견적 받기</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="cta-btn" target="_blank" rel="noopener">무료 클라우드 진단</a>
 
     <button class="hamburger" on:click={toggleMenu} aria-label="메뉴">
       <span class:open={menuOpen}></span>
@@ -74,7 +74,7 @@
         {/each}
       {/if}
       <li>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="mobile-cta" target="_blank" rel="noopener" on:click={closeMenu}>무료 견적 받기</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="mobile-cta" target="_blank" rel="noopener" on:click={closeMenu}>무료 클라우드 진단</a>
       </li>
     </ul>
   </div>

@@ -5,16 +5,15 @@
     {
       num: '01',
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-        <polyline points="14 2 14 8 20 8"/>
-        <line x1="16" y1="13" x2="8" y2="13"/>
-        <line x1="16" y1="17" x2="8" y2="17"/>
-        <polyline points="10 9 9 9 8 9"/>
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <line x1="11" y1="8" x2="11" y2="14"/>
+        <line x1="8" y1="11" x2="14" y2="11"/>
       </svg>`,
-      title: 'Kick-off',
-      subtitle: '요구사항 분석',
-      desc: '비즈니스 목표와 기술 요구사항을 심층 분석해 기능 명세서(WBS)를 작성합니다. 개발 전 100% 합의를 원칙으로 합니다.',
-      color: '#3b82f6',
+      title: 'Discovery',
+      subtitle: '현황 진단',
+      desc: '기존 인프라·아키텍처를 심층 분석하고 클라우드 전환 목표를 설정합니다. 비용 구조와 병목 지점을 파악해 우선순위를 정합니다.',
+      color: '#f59e0b',
     },
     {
       num: '02',
@@ -22,29 +21,33 @@
         <rect x="3" y="3" width="18" height="18" rx="2"/>
         <path d="M3 9h18M9 21V9"/>
       </svg>`,
-      title: 'Design & Dev',
-      subtitle: '디자인 & 개발',
-      desc: '피그마(Figma) 디자인 컨펌 후 애자일(Agile) 방식으로 빠르게 개발합니다. 2주 스프린트로 가시적인 결과를 보여드립니다.',
-      color: '#8b5cf6',
+      title: 'Architecture',
+      subtitle: '아키텍처 설계',
+      desc: 'AWS Well-Architected 프레임워크 기반으로 목표 아키텍처를 설계합니다. Terraform 플랜과 마이그레이션 로드맵을 작성하고 100% 합의 후 진행합니다.',
+      color: '#3b82f6',
     },
     {
       num: '03',
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 .18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+        <line x1="12" y1="13" x2="12" y2="20"/>
+        <polyline points="9 16 12 13 15 16"/>
       </svg>`,
-      title: 'Communication',
-      subtitle: '진행 상황 공유',
-      desc: '매주 슬랙(Slack)과 노션을 통해 진행 상황 리포트를 공유합니다. 궁금한 점은 언제든 물어보실 수 있습니다.',
-      color: '#06b6d4',
+      title: 'Migration',
+      subtitle: '구축 & 마이그레이션',
+      desc: '무중단 마이그레이션 전략으로 서비스 중단 없이 전환합니다. K8s 클러스터 구성, CI/CD 파이프라인 구축, Terraform 코드 작성을 병행합니다.',
+      color: '#8b5cf6',
     },
     {
       num: '04',
       icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <polyline points="20 6 9 17 4 12"/>
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <polyline points="9 15 11 17 15 13"/>
       </svg>`,
       title: 'Handoff',
-      subtitle: '소스코드 이관',
-      desc: '소스코드 원본을 이관하고 1개월 하자보수 보증을 제공합니다. 납품 후에도 지속적인 기술 지원이 가능합니다.',
+      subtitle: '이관 & 교육',
+      desc: 'Terraform 코드·아키텍처 문서 원본을 이관하고 운영팀 교육을 제공합니다. 구축 완료 후 1개월 무상 지원이 포함됩니다.',
       color: '#10b981',
     },
   ];
@@ -54,8 +57,8 @@
   <div class="container">
     <div class="section-header" use:reveal>
       <div class="section-label">Process</div>
-      <h2 class="section-title">이렇게 일합니다</h2>
-      <p class="section-desc">검증된 프로세스로 예측 가능한 결과를 만듭니다. 매 단계마다 투명하게 공유합니다.</p>
+      <h2 class="section-title">이렇게 전환합니다</h2>
+      <p class="section-desc">현황 진단부터 운영팀 교육까지, 검증된 4단계로 리스크 없는 클라우드 전환을 보장합니다.</p>
     </div>
 
     <div class="process-grid">
@@ -93,8 +96,8 @@
         </svg>
       </div>
       <div>
-        <strong>1개월 하자보수 보증</strong>
-        <p>납품 후 1개월간 발생하는 모든 버그와 이슈를 무상으로 처리합니다. 사업자등록 업체로서의 책임감으로 임합니다.</p>
+        <strong>1개월 무상 지원 보증</strong>
+        <p>구축 완료 후 1개월간 발생하는 모든 인프라 이슈를 무상으로 지원합니다. 사업자등록 업체로서의 책임감으로 임합니다.</p>
       </div>
     </div>
   </div>

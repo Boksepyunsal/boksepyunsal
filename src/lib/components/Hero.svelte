@@ -23,20 +23,20 @@
     <!-- 뱃지 -->
     <div class="badge">
       <span class="badge-dot"></span>
-      대기업이 선택한 기술 파트너
+      AWS SAA · CKA 공인 클라우드 아키텍트
     </div>
 
     <!-- 메인 헤드라인 -->
     <h1>
-      기술 부채 없는<br />
-      <span class="gradient-text">비즈니스 성장</span>을<br />
-      설계합니다.
+      인프라가 바뀌면<br />
+      <span class="gradient-text">비용과 속도</span>가<br />
+      달라집니다.
     </h1>
 
     <!-- 서브타이틀 -->
     <p class="subtitle">
-      7년 차 아키텍트가 이끄는 복세편살 개발 스튜디오.<br />
-      실패 없는 MVP 개발부터 대규모 트래픽의 엔터프라이즈 시스템까지.
+      AWS SAA · CKA 자격증을 보유한 복세편살 클라우드 스튜디오.<br />
+      마이그레이션부터 Kubernetes 구축, Terraform IaC, 비용 최적화까지.
     </p>
 
     <!-- CTA 버튼들 -->
@@ -45,7 +45,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        무료 견적 받기
+        무료 클라우드 진단
       </a>
       <a href="#portfolio" class="btn-secondary">
         포트폴리오 보기
@@ -58,13 +58,13 @@
     <!-- 신뢰 지표 -->
     <div class="trust-bar">
       <div class="trust-item">
-        <span class="trust-num">7<span class="trust-unit">년</span></span>
-        <span class="trust-label">개발 경력</span>
+        <span class="trust-num">AWS<span class="trust-unit"> SAA</span></span>
+        <span class="trust-label">공인 아키텍트</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-num">5<span class="trust-unit">+</span></span>
-        <span class="trust-label">완성 프로젝트</span>
+        <span class="trust-num">CKA</span>
+        <span class="trust-label">K8s 전문가</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
@@ -73,8 +73,8 @@
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-num">1<span class="trust-unit">개월</span></span>
-        <span class="trust-label">하자보수 보증</span>
+        <span class="trust-num">7<span class="trust-unit">년</span></span>
+        <span class="trust-label">클라우드 경력</span>
       </div>
     </div>
   </div>

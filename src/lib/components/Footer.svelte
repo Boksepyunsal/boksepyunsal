@@ -11,8 +11,8 @@
           <span class="logo-text">복세편살</span>
         </div>
         <p class="brand-desc">
-          기술 부채 없는 비즈니스 성장을 설계하는<br />
-          개발 스튜디오입니다.
+          AWS · Kubernetes 전문<br />
+          클라우드 아키텍처 스튜디오입니다.
         </p>
         <div class="social-links">
           <a href="https://github.com/Boksepyunsal" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
@@ -46,9 +46,11 @@
         <div class="link-group">
           <h4>서비스</h4>
           <ul>
-            <li><a href="#services">MVP & Startup</a></li>
-            <li><a href="#services">Enterprise System</a></li>
-            <li><a href="#services">Tech Consulting</a></li>
+            <li><a href="#services">클라우드 마이그레이션</a></li>
+            <li><a href="#services">Kubernetes 인프라</a></li>
+            <li><a href="#services">CI/CD & GitOps</a></li>
+            <li><a href="#services">모니터링 & 비용 최적화</a></li>
+            <li><a href="#services">클라우드 LLM / RAG</a></li>
           </ul>
         </div>
         <div class="link-group">

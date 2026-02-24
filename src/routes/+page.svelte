@@ -5,6 +5,7 @@
   import Portfolio from '$lib/components/Portfolio.svelte';
   import Process from '$lib/components/Process.svelte';
   import TechStack from '$lib/components/TechStack.svelte';
+  import Mission from '$lib/components/Mission.svelte';
   import Knowledge from '$lib/components/Knowledge.svelte';
   import Contact from '$lib/components/Contact.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -20,6 +21,7 @@
   <Hero />
   <Services />
   <Portfolio />
+  <Mission />
   <Process />
   <TechStack />
   <Knowledge />

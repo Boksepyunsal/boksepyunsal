@@ -3,19 +3,24 @@
 
   const stacks = [
     {
-      category: 'Frontend',
+      category: 'Cloud & AWS',
+      color: '#f59e0b',
+      items: ['Amazon EKS', 'AWS Lambda', 'AWS Bedrock', 'AWS CDK', 'AWS KMS', 'CloudFront', 'S3', 'RDS', 'DynamoDB', 'SQS', 'API Gateway', 'Cognito'],
+    },
+    {
+      category: 'Container & K8s',
       color: '#3b82f6',
-      items: ['React', 'Next.js', 'Flutter', 'Svelte', 'TypeScript', 'Tailwind CSS', 'Three.js', 'React Native'],
+      items: ['Kubernetes', 'Docker', 'Amazon EKS', 'Helm', 'ArgoCD', 'Istio', 'containerd', 'Ingress Nginx', 'Kustomize'],
     },
     {
-      category: 'Backend',
-      color: '#8b5cf6',
-      items: ['Node.js', 'Spring Boot', 'Rust', 'FastAPI', 'GraphQL', 'PostgreSQL', 'Redis', 'Kafka'],
-    },
-    {
-      category: 'Infra & DevOps',
+      category: 'IaC & DevOps',
       color: '#10b981',
-      items: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Vercel', 'Supabase', 'Firebase'],
+      items: ['Terraform', 'AWS CDK', 'GitHub Actions', 'Prometheus', 'Grafana', 'Datadog', 'Serverless Framework', 'GitLab CI'],
+    },
+    {
+      category: 'App Dev',
+      color: '#8b5cf6',
+      items: ['React', 'Next.js', 'Spring Boot', 'Node.js', 'Python', 'FastAPI', 'Flutter', 'TypeScript', 'GraphQL'],
     },
   ];
 </script>
@@ -24,8 +29,8 @@
   <div class="container">
     <div class="section-header" use:reveal>
       <div class="section-label">Tech Stack</div>
-      <h2 class="section-title">검증된 기술로 만듭니다</h2>
-      <p class="section-desc">최신 트렌드를 따르면서도 프로덕션에서 검증된 기술 스택만을 사용합니다.</p>
+      <h2 class="section-title">엔터프라이즈급 클라우드 스택</h2>
+      <p class="section-desc">AWS 공인 아키텍트 · CKA 자격증을 바탕으로 엔터프라이즈 환경에서 검증된 AWS · Kubernetes 생태계 기술을 활용합니다.</p>
     </div>
   </div>
 

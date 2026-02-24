@@ -7,8 +7,8 @@
   <div class="container">
     <div class="section-header" use:reveal>
       <div class="section-label">Portfolio</div>
-      <h2 class="section-title">실제로 만든 것들</h2>
-      <p class="section-desc">말보다 결과물로 증명합니다. 각 프로젝트는 기술적 도전과 비즈니스 가치를 동시에 달성했습니다.</p>
+      <h2 class="section-title">클라우드 구축 레퍼런스</h2>
+      <p class="section-desc">AWS 마이그레이션부터 K8s 인프라, LLM/RAG까지 — 실제 구축한 클라우드 프로젝트입니다.</p>
     </div>
 
     <div class="portfolio-grid">
@@ -55,8 +55,8 @@
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 280px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 320px;
     gap: 16px;
   }
 
@@ -212,23 +212,10 @@
     color: var(--text-secondary);
   }
 
-  @media (max-width: 900px) {
-    .portfolio-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 260px;
-    }
-    .project-card.large {
-      grid-column: span 2;
-    }
-  }
-
   @media (max-width: 600px) {
     .portfolio-grid {
       grid-template-columns: 1fr;
       grid-auto-rows: auto;
-    }
-    .project-card.large {
-      grid-column: span 1;
     }
     .project-card { min-height: 220px; }
   }
