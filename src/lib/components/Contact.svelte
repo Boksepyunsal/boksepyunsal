@@ -10,10 +10,10 @@
       <div class="contact-orb orb-2" aria-hidden="true"></div>
 
       <div class="contact-inner">
-        <div class="section-label">Contact</div>
-        <h2>프로젝트를 시작할<br /><span class="gradient-text">준비가 됐나요?</span></h2>
+        <div class="section-label">Contact · 함께 시작하기</div>
+        <h2>기후친화적인<br /><span class="gradient-text">서비스를 만들어봐요</span></h2>
         <p class="contact-desc">
-          무료 기술 진단 & 예상 견적서를 받아보세요.<br />
+          오픈 이벤트 외에도 문의는 언제든 환영합니다.<br />
           아이디어 단계여도 괜찮습니다. 먼저 이야기 나눠봅시다.
         </p>
 
@@ -92,7 +92,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
           </svg>
-          무료 기술 진단 & 견적서 요청하기
+          문의 & 견적 요청하기
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>

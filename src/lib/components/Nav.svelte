@@ -8,10 +8,10 @@
   $: isProjectPage = $page.url.pathname.startsWith('/projects/');
 
   const links = [
+    { label: '기후 이야기', href: '/#climate' },
+    { label: '우리의 기여', href: '/#mission' },
     { label: '서비스', href: '/#services' },
-    { label: '포트폴리오', href: '/#portfolio' },
-    { label: '프로세스', href: '/#process' },
-    { label: '기술 스택', href: '/#techstack' },
+    { label: '오픈 이벤트', href: '/#event' },
   ];
 
   onMount(() => {
@@ -53,7 +53,7 @@
       </ul>
     {/if}
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="cta-btn" target="_blank" rel="noopener">무료 클라우드 진단</a>
+    <a href="/#event" class="cta-btn">이벤트 신청하기</a>
 
     <button class="hamburger" on:click={toggleMenu} aria-label="메뉴">
       <span class:open={menuOpen}></span>
@@ -74,7 +74,7 @@
         {/each}
       {/if}
       <li>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="mobile-cta" target="_blank" rel="noopener" on:click={closeMenu}>무료 클라우드 진단</a>
+        <a href="/#event" class="mobile-cta" on:click={closeMenu}>이벤트 신청하기</a>
       </li>
     </ul>
   </div>
@@ -170,7 +170,7 @@
   .cta-btn {
     flex-shrink: 0;
     padding: 9px 20px;
-    background: var(--gradient);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     font-size: 14px;
     font-weight: 600;
@@ -182,7 +182,7 @@
   .cta-btn:hover {
     opacity: 0.9;
     transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(217, 119, 87, 0.35);
+    box-shadow: 0 8px 24px rgba(34, 197, 94, 0.35);
   }
 
   .hamburger {
@@ -251,7 +251,7 @@
   }
 
   .mobile-cta {
-    background: var(--gradient) !important;
+    background: linear-gradient(135deg, #22c55e, #16a34a) !important;
     color: white !important;
     text-align: center;
     margin-top: 8px;

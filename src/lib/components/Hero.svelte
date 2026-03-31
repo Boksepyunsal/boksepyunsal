@@ -23,58 +23,58 @@
     <!-- 뱃지 -->
     <div class="badge">
       <span class="badge-dot"></span>
-      AWS SAA · CKA 공인 클라우드 아키텍트
+      지구를 위한 소프트웨어
     </div>
 
     <!-- 메인 헤드라인 -->
     <h1>
-      인프라가 바뀌면<br />
-      <span class="gradient-text">비용과 속도</span>가<br />
-      달라집니다.
+      기후가 변하고 있습니다.<br />
+      <span class="gradient-text">소프트웨어</span>도<br />
+      응답해야 합니다.
     </h1>
 
     <!-- 서브타이틀 -->
     <p class="subtitle">
-      AWS SAA · CKA 자격증을 보유한 복세편살 클라우드 스튜디오.<br />
-      마이그레이션부터 Kubernetes 구축, Terraform IaC, 비용 최적화까지.
+      전 세계 데이터센터는 항공 산업만큼의 탄소를 배출하고 있습니다.<br />
+      복세편살은 리소스를 최적화한 소프트웨어로 그 숫자를 줄이고자 합니다.
     </p>
 
     <!-- CTA 버튼들 -->
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">
+      <a href="#event" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
         </svg>
-        무료 클라우드 진단
+        무료 오픈 이벤트 신청
       </a>
-      <a href="#portfolio" class="btn-secondary">
-        포트폴리오 보기
+      <a href="#climate" class="btn-secondary">
+        기후 위기 이야기 보기
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
       </a>
     </div>
 
-    <!-- 신뢰 지표 -->
+    <!-- 기후 지표 -->
     <div class="trust-bar">
       <div class="trust-item">
-        <span class="trust-num">AWS<span class="trust-unit"> SAA</span></span>
-        <span class="trust-label">공인 아키텍트</span>
+        <span class="trust-num">1.45<span class="trust-unit">°C</span></span>
+        <span class="trust-label">2023년 기온 상승<br />(산업화 이전 대비)</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-num">CKA</span>
-        <span class="trust-label">K8s 전문가</span>
+        <span class="trust-num">423<span class="trust-unit">ppm</span></span>
+        <span class="trust-label">CO₂ 농도<br />역대 최고치</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-num">GS<span class="trust-unit"> 외</span></span>
-        <span class="trust-label">대기업 레퍼런스</span>
+        <span class="trust-num">2<span class="trust-unit">%</span></span>
+        <span class="trust-label">IT 산업의<br />전 세계 전력 소비</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-num">7<span class="trust-unit">년</span></span>
-        <span class="trust-label">클라우드 경력</span>
+        <span class="trust-num">80<span class="trust-unit">%</span></span>
+        <span class="trust-label">클라우드 전환 시<br />에너지 절감 가능</span>
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@
   .orb-1 {
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(217, 119, 87, 0.22) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, transparent 70%);
     top: -200px;
     left: -150px;
     animation-delay: 0.2s, 0s;
@@ -128,7 +128,7 @@
   .orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(196, 90, 53, 0.14) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(217, 119, 87, 0.14) 0%, transparent 70%);
     bottom: -100px;
     right: -100px;
     animation-delay: 0.5s, -4s;
@@ -138,7 +138,7 @@
   .orb-3 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(230, 185, 140, 0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
     top: 40%;
     left: 60%;
     animation-delay: 0.8s, -7s;
@@ -160,8 +160,8 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(100, 72, 46, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(100, 72, 46, 0.06) 1px, transparent 1px);
+      linear-gradient(rgba(100, 72, 46, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 72, 46, 0.05) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
     pointer-events: none;
@@ -192,12 +192,12 @@
     align-items: center;
     gap: 8px;
     padding: 7px 16px;
-    background: rgba(217, 119, 87, 0.10);
-    border: 1px solid rgba(217, 119, 87, 0.28);
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.22);
     border-radius: 100px;
     font-size: 13px;
     font-weight: 600;
-    color: #C45A35;
+    color: #16a34a;
     margin-bottom: 32px;
     animation: badge-glow 3s ease-in-out infinite;
   }
@@ -205,19 +205,19 @@
   .badge-dot {
     width: 7px;
     height: 7px;
-    background: #D97757;
+    background: #22c55e;
     border-radius: 50%;
     animation: pulse-dot 2s ease-in-out infinite;
   }
 
   @keyframes pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(217, 119, 87, 0.6); }
-    50% { box-shadow: 0 0 0 5px rgba(217, 119, 87, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+    50% { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0); }
   }
 
   @keyframes badge-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(217, 119, 87, 0.08); }
-    50% { box-shadow: 0 0 30px rgba(217, 119, 87, 0.20); }
+    0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.06); }
+    50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.16); }
   }
 
   /* ---- 헤드라인 ---- */
@@ -235,7 +235,7 @@
     font-size: clamp(16px, 2vw, 19px);
     color: var(--text-secondary);
     line-height: 1.8;
-    max-width: 520px;
+    max-width: 560px;
     margin-bottom: 44px;
   }
 
@@ -254,18 +254,18 @@
     align-items: center;
     gap: 8px;
     padding: 15px 28px;
-    background: var(--gradient);
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
     font-size: 15px;
     font-weight: 700;
     border-radius: 100px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 0 40px rgba(217, 119, 87, 0.25);
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.25);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 40px rgba(217, 119, 87, 0.40);
+    box-shadow: 0 8px 40px rgba(34, 197, 94, 0.40);
   }
 
   .btn-secondary {
@@ -288,7 +288,7 @@
     transform: translateY(-2px);
   }
 
-  /* ---- 신뢰 지표 ---- */
+  /* ---- 기후 지표 ---- */
   .trust-bar {
     display: flex;
     align-items: center;
@@ -318,14 +318,16 @@
   .trust-unit {
     font-size: 16px;
     font-weight: 600;
-    color: var(--blue-light); /* --blue-light은 이제 앰버(#e8c06a) */
+    color: #22c55e;
   }
 
   .trust-label {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     color: var(--text-muted);
     white-space: nowrap;
+    text-align: center;
+    line-height: 1.5;
   }
 
   .trust-divider {

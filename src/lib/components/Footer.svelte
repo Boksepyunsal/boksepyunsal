@@ -11,8 +11,8 @@
           <span class="logo-text">복세편살</span>
         </div>
         <p class="brand-desc">
-          AWS · Kubernetes 전문<br />
-          클라우드 아키텍처 스튜디오입니다.
+          리소스를 최적화한 소프트웨어로<br />
+          기후변화에 기여합니다.
         </p>
         <div class="social-links">
           <a href="https://github.com/Boksepyunsal" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
@@ -25,28 +25,28 @@
 
       <div class="footer-links">
         <div class="link-group">
-          <h4>서비스</h4>
+          <h4>스토리</h4>
           <ul>
-            <li><a href="#services">클라우드 마이그레이션</a></li>
-            <li><a href="#services">Kubernetes 인프라</a></li>
-            <li><a href="#services">CI/CD & GitOps</a></li>
-            <li><a href="#services">모니터링 & 비용 최적화</a></li>
-            <li><a href="#services">클라우드 LLM / RAG</a></li>
+            <li><a href="/#climate">기후 위기 이야기</a></li>
+            <li><a href="/#mission">우리의 기여</a></li>
+            <li><a href="/#services">서비스 소개</a></li>
+            <li><a href="/#event">오픈 이벤트</a></li>
           </ul>
         </div>
         <div class="link-group">
-          <h4>회사</h4>
+          <h4>서비스</h4>
           <ul>
-            <li><a href="#portfolio">포트폴리오</a></li>
-            <li><a href="#process">작업 프로세스</a></li>
-            <li><a href="#knowledge">지식 공유</a></li>
+            <li><a href="/#services">클라우드 마이그레이션</a></li>
+            <li><a href="/#services">Kubernetes 인프라</a></li>
+            <li><a href="/#services">CI/CD & GitOps</a></li>
+            <li><a href="/#services">Serverless 개발</a></li>
           </ul>
         </div>
         <div class="link-group">
           <h4>연락처</h4>
           <ul>
             <li><a href="mailto:boksepyunsal24@gmail.com">이메일</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" target="_blank" rel="noopener">견적 문의</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" target="_blank" rel="noopener">이벤트 신청</a></li>
             <li><a href="https://open.kakao.com/o/sRJ0h5Fg" target="_blank" rel="noopener">카카오톡</a></li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
         <span class="dot">·</span>
         <span>서울 (미팅 가능)</span>
       </div>
-      <p class="copyright">© {year} 복세편살 개발 스튜디오. All rights reserved.</p>
+      <p class="copyright">© {year} 복세편살. 리소스 최적화로 기후에 기여합니다. All rights reserved.</p>
     </div>
   </div>
 </footer>

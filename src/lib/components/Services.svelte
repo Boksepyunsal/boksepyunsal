@@ -96,9 +96,9 @@
 <section id="services">
   <div class="container">
     <div class="section-header" use:reveal>
-      <div class="section-label">Services</div>
-      <h2 class="section-title">클라우드, 이렇게 도와드립니다</h2>
-      <p class="section-desc">마이그레이션부터 비용 최적화까지, 클라우드의 모든 기술적 도전을 함께합니다.</p>
+      <div class="section-label">Services · 기여하는 방법</div>
+      <h2 class="section-title">리소스 최적화,<br />이렇게 실현합니다</h2>
+      <p class="section-desc">Serverless, 오토스케일링, IaC — 낭비를 없애고 효율을 높이는 기술로 기후친화적인 서비스를 만듭니다.</p>
     </div>
 
     <div class="services-grid">
