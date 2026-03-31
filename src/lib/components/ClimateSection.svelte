@@ -1,39 +1,61 @@
 <script>
   import { reveal } from '$lib/actions/reveal.js';
 
-  const problems = [
+  // Unsplash 무료 이미지 (기후 위기 관련 실제 사진들)
+  const crisisImages = [
     {
-      year: '2023',
-      headline: '역대 가장 뜨거운 해',
-      stat: '+1.45°C',
-      statLabel: '산업화 이전 대비 기온 상승',
-      desc: '2023년 7월은 인류가 기록을 남긴 이래 가장 더운 달이었습니다. 세계기상기구(WMO)는 지구 평균기온이 산업화 이전보다 1.45°C 상승했다고 밝혔습니다.',
-      color: '#ef4444',
-      glow: 'rgba(239, 68, 68, 0.15)',
+      url: 'https://images.unsplash.com/photo-1520808418718-7d83e2e0d671?auto=format&fit=crop&w=900&q=80',
+      position: 'center 40%',
+      tag: '북극',
+      caption: '녹아내리는 빙하 위의 북극곰',
+      stat: '2050년 멸종 위기',
+      color: '#60a5fa',
     },
     {
-      year: '현재',
-      headline: 'CO₂ 농도 300만 년 만의 최고치',
-      stat: '423ppm',
-      statLabel: '대기 중 이산화탄소 농도',
-      desc: '현재 대기 중 CO₂ 농도는 423ppm으로, 인류의 조상이 처음 도구를 만들기 전인 300만 년 전 이후 최고 수준입니다. 이 수치는 매년 빠르게 상승하고 있습니다.',
+      url: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=900&q=80',
+      position: 'center center',
+      tag: '해양',
+      caption: '산호 백화 현상 — 색을 잃어가는 바다',
+      stat: '전 세계 산호초 50% 소멸',
+      color: '#34d399',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80',
+      position: 'center 60%',
+      tag: '산불',
+      caption: '기록적 산불이 삼킨 숲',
+      stat: '2023 캐나다 역대 최대 산불',
       color: '#f97316',
-      glow: 'rgba(249, 115, 22, 0.15)',
     },
     {
-      year: '매년',
-      headline: '극단적 기상재해의 일상화',
-      stat: '수십조 원',
-      statLabel: '전 세계 기상재해 경제 손실',
-      desc: '캐나다 역대 최대 산불, 유럽 기록적 홍수, 아시아 초강력 태풍. 극단적 기상 현상은 이제 뉴스에서 사라지지 않습니다. 기후변화는 미래의 이야기가 아닙니다.',
-      color: '#8b5cf6',
-      glow: 'rgba(139, 92, 246, 0.15)',
+      url: 'https://images.unsplash.com/photo-1504270997636-07ddfbd48945?auto=format&fit=crop&w=900&q=80',
+      position: 'center center',
+      tag: '가뭄',
+      caption: '갈라진 대지 — 사라진 강과 호수',
+      stat: '10억 명 물 부족 위기',
+      color: '#fbbf24',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?auto=format&fit=crop&w=900&q=80',
+      position: 'center 30%',
+      tag: '해양오염',
+      caption: '플라스틱 쓰레기 속 바다거북',
+      stat: '매년 800만 톤 해양 투기',
+      color: '#a78bfa',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=900&q=80',
+      position: 'center 50%',
+      tag: '홍수',
+      caption: '기록적 홍수에 잠긴 마을',
+      stat: '극단적 기상재해 2배 증가',
+      color: '#38bdf8',
     },
   ];
 
   const solutions = [
     {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
         <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
         <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/>
@@ -44,14 +66,14 @@
       desc: '태양광과 풍력으로 화석연료를 대체합니다.',
     },
     {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
       </svg>`,
       title: '에너지 효율화',
       desc: '스마트 그리드와 고효율 기기로 낭비를 줄입니다.',
     },
     {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>
         <line x1="12" y1="17" x2="12" y2="21"/>
       </svg>`,
@@ -60,46 +82,44 @@
       highlight: true,
     },
     {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>`,
-      title: '지속가능한 소비',
-      desc: '순환경제와 자원 재사용으로 폐기물을 줄입니다.',
-    },
-    {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>`,
       title: '탄소 흡수원 보호',
       desc: '숲과 습지를 지켜 자연의 탄소 흡수 능력을 유지합니다.',
     },
     {
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
       </svg>`,
       title: '국제 협력',
-      desc: '파리협정과 같은 글로벌 합의로 공동 목표를 향해 나아갑니다.',
+      desc: '파리협정 목표 아래 글로벌 공동 대응을 이어갑니다.',
+    },
+    {
+      icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>`,
+      title: '지속가능한 소비',
+      desc: '순환경제와 자원 재사용으로 폐기물을 줄입니다.',
     },
   ];
 
   const itImpacts = [
     {
-      stat: '항공 산업만큼',
-      label: '데이터센터 탄소 배출량',
-      desc: '전 세계 데이터센터가 배출하는 탄소는 항공 산업과 맞먹습니다. 그리고 AI와 클라우드 수요가 늘수록 이 수치는 커집니다.',
+      stat: '항공 산업과 동일',
+      label: '데이터센터 연간 탄소 배출량',
+      desc: '전 세계 데이터센터가 배출하는 탄소는 항공 산업과 맞먹습니다. AI와 클라우드 수요가 늘수록 이 수치는 빠르게 커집니다.',
     },
     {
-      stat: '72%',
-      label: '클라우드 전환 시 탄소 감소',
-      desc: '온프레미스 서버를 클라우드로 전환하면 평균 72%의 탄소 발자국이 줄어듭니다. 리소스를 공유하고 효율적으로 쓰기 때문입니다.',
+      stat: '72% 감소',
+      label: '클라우드 전환 시 탄소 발자국',
+      desc: '온프레미스 서버를 클라우드로 전환하면 평균 72%의 탄소 발자국이 줄어듭니다. 자원을 공유하고 효율적으로 쓰기 때문입니다.',
     },
     {
       stat: '~0%',
       label: 'Serverless의 유휴 전력 소비',
-      desc: 'Serverless 아키텍처는 요청이 없으면 서버가 꺼집니다. 24시간 켜두는 기존 방식과 달리, 필요할 때만 자원을 쓰는 구조입니다.',
+      desc: 'Serverless 아키텍처는 요청이 없으면 서버가 꺼집니다. 24시간 켜두는 기존 방식과 달리, 필요할 때만 자원을 씁니다.',
     },
   ];
 </script>
@@ -113,23 +133,53 @@
         <span class="chapter-num">01</span>
         <span class="chapter-label">The Problem</span>
       </div>
-      <h2 class="chapter-title">지금 지구는<br /><span class="accent-red">위기</span>에 처해 있습니다</h2>
+      <h2 class="chapter-title">지금, 지구에서<br /><span class="accent-red">사라져가는 것들</span></h2>
       <p class="chapter-desc">
-        기후변화는 먼 미래의 이야기가 아닙니다. 지금 이 순간에도 지구는 달라지고 있고,
-        그 속도는 우리가 예상했던 것보다 훨씬 빠릅니다.
+        숫자보다 솔직한 것은 눈앞의 현실입니다.<br />
+        기후변화로 고통받는 것은 수치가 아니라, 살아숨쉬는 생명들입니다.
       </p>
     </div>
 
-    <div class="problem-cards">
-      {#each problems as p, i}
-        <div class="problem-card" use:reveal={{ delay: i * 120 }} style="--color: {p.color}; --glow: {p.glow}">
-          <div class="problem-year">{p.year}</div>
-          <div class="problem-stat">{p.stat}</div>
-          <div class="problem-stat-label">{p.statLabel}</div>
-          <h3>{p.headline}</h3>
-          <p>{p.desc}</p>
+    <!-- 이미지 갤러리 -->
+    <div class="crisis-gallery">
+      {#each crisisImages as img, i}
+        <div
+          class="gallery-item"
+          use:reveal={{ delay: i * 80 }}
+          style="--accent: {img.color}"
+        >
+          <img src={img.url} alt={img.caption} loading="lazy" style="object-position: {img.position}" />
+          <div class="img-overlay"></div>
+          <div class="img-tag">{img.tag}</div>
+          <div class="img-info">
+            <div class="img-stat">{img.stat}</div>
+            <p class="img-caption">{img.caption}</p>
+          </div>
         </div>
       {/each}
+    </div>
+
+    <!-- 기후 통계 배너 -->
+    <div class="stats-banner" use:reveal>
+      <div class="stat-item">
+        <span class="stat-num">+1.45<span class="stat-unit">°C</span></span>
+        <span class="stat-desc">2023년 지구 평균기온 상승</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">423<span class="stat-unit">ppm</span></span>
+        <span class="stat-desc">CO₂ 농도 — 300만 년 만의 최고</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">1<span class="stat-unit">백만 종</span></span>
+        <span class="stat-desc">멸종 위기에 처한 동식물</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">2x</span>
+        <span class="stat-desc">극단적 기상재해 발생 빈도 증가</span>
+      </div>
     </div>
 
     <!-- Chapter 2: 해결책 -->
@@ -140,14 +190,14 @@
       </div>
       <h2 class="chapter-title">그래도, 우리가<br /><span class="accent-green">할 수 있는 것</span>들이 있습니다</h2>
       <p class="chapter-desc">
-        절망하기엔 이릅니다. 전 세계 과학자, 기업, 개인들이 다양한 방법으로
-        기후변화에 맞서고 있습니다. 해결의 실마리는 여러 방향에 있습니다.
+        절망하기엔 이릅니다. 해결의 실마리는 여러 방향에 있고,
+        그 중 하나는 우리가 매일 쓰는 소프트웨어 안에 있습니다.
       </p>
     </div>
 
     <div class="solutions-grid">
       {#each solutions as s, i}
-        <div class="solution-card" class:highlighted={s.highlight} use:reveal={{ delay: i * 80 }}>
+        <div class="solution-card" class:highlighted={s.highlight} use:reveal={{ delay: i * 70 }}>
           <div class="solution-icon" class:highlight-icon={s.highlight}>
             {@html s.icon}
           </div>
@@ -183,7 +233,7 @@
       {/each}
     </div>
 
-    <!-- 연결 화살표 -->
+    <!-- 연결 -->
     <div class="bridge" use:reveal>
       <div class="bridge-line"></div>
       <div class="bridge-text">그래서 복세편살이 만들어졌습니다</div>
@@ -205,19 +255,22 @@
     margin-bottom: 56px;
   }
 
-  .chapter-2 {
-    margin-top: 100px;
-  }
-
-  .chapter-3 {
-    margin-top: 100px;
-  }
+  .chapter-2 { margin-top: 100px; }
+  .chapter-3 { margin-top: 100px; }
 
   .chapter-tag {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+  }
+
+  .chapter-tag::before,
+  .chapter-tag::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--border);
   }
 
   .chapter-num {
@@ -236,14 +289,6 @@
     letter-spacing: 0.12em;
   }
 
-  .chapter-tag::before,
-  .chapter-tag::after {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background: var(--border);
-  }
-
   .chapter-title {
     font-size: clamp(32px, 5vw, 54px);
     font-weight: 900;
@@ -257,96 +302,165 @@
     font-size: 17px;
     color: var(--text-secondary);
     line-height: 1.85;
-    max-width: 580px;
+    max-width: 560px;
     margin: 0 auto;
   }
 
-  .accent-red { color: #ef4444; }
+  .accent-red   { color: #ef4444; }
   .accent-green { color: #22c55e; }
-  .accent-blue { color: #3b82f6; }
+  .accent-blue  { color: #3b82f6; }
 
-  /* ---- Problem Cards ---- */
-  .problem-cards {
+  /* ---- 이미지 갤러리 ---- */
+  .crisis-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 14px;
+    margin-bottom: 40px;
   }
 
-  .problem-card {
-    padding: 36px 28px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    transition: border-color 0.25s, box-shadow 0.25s;
+  .gallery-item {
     position: relative;
+    height: 280px;
+    border-radius: 16px;
     overflow: hidden;
+    cursor: default;
+    background: var(--surface);
   }
 
-  .problem-card::before {
-    content: '';
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.06);
+  }
+
+  /* 기본 어두운 그라디언트 오버레이 */
+  .img-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color);
-    opacity: 0.7;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.10) 0%,
+      rgba(0, 0, 0, 0.25) 50%,
+      rgba(0, 0, 0, 0.72) 100%
+    );
+    transition: background 0.3s ease;
   }
 
-  .problem-card:hover {
-    border-color: var(--color);
-    box-shadow: 0 0 40px var(--glow);
+  .gallery-item:hover .img-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.35) 50%,
+      rgba(0, 0, 0, 0.82) 100%
+    );
   }
 
-  .problem-year {
+  /* 태그 (좌상단) */
+  .img-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 4px 10px;
+    background: var(--accent);
+    color: white;
     font-size: 11px;
     font-weight: 700;
-    color: var(--color);
+    border-radius: 6px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 16px;
   }
 
-  .problem-stat {
-    font-size: 42px;
+  /* 하단 정보 */
+  .img-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 18px;
+  }
+
+  .img-stat {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .img-caption {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* ---- 통계 배너 ---- */
+  .stats-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 32px 40px;
+    background: rgba(239, 68, 68, 0.04);
+    border: 1px solid rgba(239, 68, 68, 0.14);
+    border-radius: 20px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 36px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-size: 30px;
     font-weight: 900;
-    color: var(--color);
+    color: var(--text);
     letter-spacing: -0.04em;
     line-height: 1;
-    margin-bottom: 4px;
   }
 
-  .problem-stat-label {
+  .stat-unit {
+    font-size: 17px;
+    font-weight: 600;
+    color: #ef4444;
+  }
+
+  .stat-desc {
     font-size: 12px;
     font-weight: 500;
     color: var(--text-muted);
-    margin-bottom: 20px;
+    white-space: nowrap;
   }
 
-  .problem-card h3 {
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--text);
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-
-  .problem-card p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.75;
+  .stat-divider {
+    width: 1px;
+    height: 44px;
+    background: rgba(239, 68, 68, 0.15);
+    flex-shrink: 0;
   }
 
   /* ---- Solutions Grid ---- */
   .solutions-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .solution-card {
-    padding: 28px 24px;
+    padding: 26px 22px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -369,8 +483,8 @@
   }
 
   .solution-icon {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 12px;
     background: rgba(100, 72, 46, 0.07);
     border: 1px solid var(--border);
@@ -378,7 +492,7 @@
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .solution-icon.highlight-icon {
@@ -388,7 +502,7 @@
   }
 
   .solution-card h4 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text);
     letter-spacing: -0.01em;
@@ -403,7 +517,7 @@
 
   .highlight-tag {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 10px;
     padding: 3px 10px;
     background: rgba(34, 197, 94, 0.12);
     border: 1px solid rgba(34, 197, 94, 0.25);
@@ -414,7 +528,7 @@
     letter-spacing: 0.04em;
   }
 
-  /* ---- IT Impact Row ---- */
+  /* ---- IT Impact ---- */
   .it-impact-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -430,7 +544,7 @@
   }
 
   .impact-stat {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 900;
     color: var(--text);
     letter-spacing: -0.04em;
@@ -444,7 +558,7 @@
     color: #3b82f6;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .impact-desc {
@@ -480,7 +594,10 @@
 
   /* ---- 반응형 ---- */
   @media (max-width: 900px) {
-    .problem-cards,
+    .crisis-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .it-impact-row {
       grid-template-columns: 1fr;
     }
@@ -488,17 +605,36 @@
     .solutions-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .stats-banner {
+      gap: 20px;
+      padding: 24px;
+    }
+
+    .stat-item { padding: 0 16px; }
+    .stat-divider { display: none; }
   }
 
   @media (max-width: 600px) {
+    .crisis-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-item { height: 240px; }
+
     .solutions-grid {
       grid-template-columns: 1fr;
     }
 
+    .stats-banner {
+      flex-direction: column;
+      gap: 16px;
+    }
+
     .bridge-text {
       font-size: 12px;
-      text-align: center;
       white-space: normal;
+      text-align: center;
     }
   }
 </style>
