@@ -36,26 +36,6 @@
             </div>
           </a>
 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="contact-card" target="_blank" rel="noopener">
-            <div class="card-icon form-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
-            <div>
-              <span class="contact-label">견적 문의 (구글폼)</span>
-              <span class="contact-value">무료 견적 요청하기</span>
-            </div>
-            <div class="card-arrow">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </a>
-
           <a href="https://open.kakao.com/o/sRJ0h5Fg" class="contact-card kakao" target="_blank" rel="noopener">
             <div class="card-icon kakao-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -86,17 +66,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 메인 CTA -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfG617zgP3HbNcN-qJC2apfu-buzRXRaasaqOceghlgXpGiuQ/viewform?usp=publish-editor" class="main-cta" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-          </svg>
-          문의 & 견적 요청하기
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
 
         <p class="cta-note">24시간 내 회신 드립니다 · 초기 상담 무료</p>
       </div>
@@ -172,7 +141,7 @@
 
   .contact-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin-bottom: 40px;
     text-align: left;
@@ -263,6 +232,7 @@
   @media (max-width: 768px) {
     .contact-wrapper { padding: 40px 24px; }
     .contact-cards { grid-template-columns: 1fr; }
+    .contact-cards .contact-card:last-child { grid-column: 1; }
     .main-cta { width: 100%; justify-content: center; }
   }
 </style>

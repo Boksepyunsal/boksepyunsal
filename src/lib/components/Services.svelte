@@ -5,55 +5,57 @@
     {
       num: '01',
       icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-        <line x1="12" y1="13" x2="12" y2="20"/>
-        <polyline points="9 16 12 13 15 16"/>
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
       </svg>`,
-      title: '클라우드 마이그레이션',
-      tagline: 'Terraform 기반 무중단 전환',
-      desc: '온프레미스·레거시 시스템을 AWS로 안전하게 이전합니다. Terraform IaC로 인프라를 코드화해 재현 가능한 환경을 구성하고, Well-Architected 기반으로 가용성·보안·비용 효율을 동시에 달성합니다.',
-      techs: ['Terraform', 'AWS CDK', 'Amazon ECS / EKS', 'CloudFormation'],
-      gradient: 'linear-gradient(135deg, #f59e0b, #f97316)',
-      glowColor: 'rgba(245, 158, 11, 0.25)',
+      title: '웹 애플리케이션 개발',
+      tagline: 'React · Next.js · SvelteKit',
+      desc: '사용자 경험을 중심으로 한 웹 애플리케이션을 개발합니다. Serverless 아키텍처와 Edge 배포를 기본으로, 빠르고 가볍게 — 탄소 발자국이 적은 웹을 만듭니다.',
+      techs: ['React', 'Next.js', 'SvelteKit', 'TypeScript', 'Serverless', 'Edge Deploy'],
+      gradient: 'linear-gradient(135deg, #06b6d4, #3b82f6)',
+      glowColor: 'rgba(6, 182, 212, 0.25)',
     },
     {
       num: '02',
       icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <circle cx="12" cy="12" r="3"/>
-        <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        <rect x="5" y="2" width="14" height="20" rx="2"/>
+        <line x1="12" y1="18" x2="12.01" y2="18"/>
       </svg>`,
-      title: 'Kubernetes 인프라',
-      tagline: 'EKS · 직접 구축 · Terraform',
-      desc: 'CKA 자격증 보유 전문가가 Amazon EKS 또는 베어메탈 K8s 클러스터를 구축합니다. Terraform으로 클러스터를 프로비저닝하고, ArgoCD GitOps로 선언적 배포 환경까지 완성합니다.',
-      techs: ['Kubernetes (EKS · 직접 구축)', 'Terraform', 'ArgoCD', 'Helm'],
-      gradient: 'linear-gradient(135deg, #3b82f6, #06b6d4)',
-      glowColor: 'rgba(59, 130, 246, 0.25)',
+      title: '모바일 앱 개발',
+      tagline: 'React Native · Flutter',
+      desc: 'iOS · Android 크로스플랫폼 앱을 개발합니다. 하나의 코드베이스로 두 플랫폼을 동시에 지원해 개발 리소스를 최소화하고, 배터리·데이터 효율을 고려한 경량 앱을 만듭니다.',
+      techs: ['React Native', 'Flutter', 'Expo', 'iOS', 'Android'],
+      gradient: 'linear-gradient(135deg, #10b981, #06b6d4)',
+      glowColor: 'rgba(16, 185, 129, 0.25)',
     },
     {
       num: '03',
+      icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+        <line x1="12" y1="13" x2="12" y2="20"/>
+        <polyline points="9 16 12 13 15 16"/>
+      </svg>`,
+      title: '클라우드 인프라 · Serverless',
+      tagline: 'AWS · Terraform · 리소스 최적화',
+      desc: '필요한 만큼만 쓰는 인프라를 설계합니다. Serverless와 오토스케일링으로 유휴 자원을 없애고, Terraform IaC로 재현 가능한 환경을 구성합니다. 비용과 탄소를 동시에 줄입니다.',
+      techs: ['AWS Lambda', 'Serverless', 'Terraform', 'ECS / EKS', 'CloudFormation'],
+      gradient: 'linear-gradient(135deg, #f59e0b, #f97316)',
+      glowColor: 'rgba(245, 158, 11, 0.25)',
+    },
+    {
+      num: '04',
       icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <polyline points="16 18 22 12 16 6"/>
         <polyline points="8 6 2 12 8 18"/>
         <line x1="19" y1="12" x2="5" y2="12"/>
       </svg>`,
-      title: 'CI/CD & GitOps',
+      title: 'CI/CD & 자동화',
       tagline: '코드 커밋부터 자동 배포까지',
-      desc: 'GitHub Actions · GitLab CI 기반 CI/CD 파이프라인과 ArgoCD GitOps 환경을 구축합니다. 코드 커밋부터 프로덕션 배포까지 완전 자동화해 배포 리스크와 반복 작업을 제거합니다.',
-      techs: ['GitHub Actions', 'GitLab CI', 'ArgoCD', 'Helm'],
+      desc: 'GitHub Actions 기반 CI/CD 파이프라인으로 배포를 완전 자동화합니다. 반복 작업을 없애고 개발자가 코드에 집중할 수 있는 환경을 만듭니다.',
+      techs: ['GitHub Actions', 'GitLab CI', 'ArgoCD', 'Docker', 'Helm'],
       gradient: 'linear-gradient(135deg, #8b5cf6, #ec4899)',
       glowColor: 'rgba(139, 92, 246, 0.25)',
-    },
-    {
-      num: '04',
-      icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>`,
-      title: '모니터링 & 비용 최적화',
-      tagline: '장애 전에 먼저 알아냅니다',
-      desc: 'Prometheus + Grafana 또는 Datadog으로 클라우드·K8s 환경의 메트릭·로그·알림 시스템을 구축합니다. AWS 비용 구조 분석과 Reserved Instance, Savings Plans 최적화로 지출도 절감합니다.',
-      techs: ['Prometheus', 'Grafana', 'Datadog', 'AWS Cost Explorer'],
-      gradient: 'linear-gradient(135deg, #06b6d4, #10b981)',
-      glowColor: 'rgba(6, 182, 212, 0.25)',
     },
     {
       num: '05',
@@ -63,10 +65,10 @@
         <circle cx="12" cy="10" r="1" fill="currentColor"/>
         <circle cx="15" cy="10" r="1" fill="currentColor"/>
       </svg>`,
-      title: '클라우드 LLM / RAG 서비스',
-      tagline: 'AWS Bedrock · OpenSearch 기반 엔터프라이즈 AI',
-      desc: 'AWS Bedrock(Claude · Llama)과 OpenSearch 또는 pgvector 기반 RAG 파이프라인을 클라우드 위에 구축합니다. 기업 문서·사내 데이터를 학습시켜 AI 어시스턴트, 고객 챗봇, 자동화 에이전트로 활용하세요. LangGraph 에이전트와 데이터 주권 아키텍처로 보안·규정 준수도 충족합니다.',
-      techs: ['AWS Bedrock', 'OpenSearch (하이브리드 검색)', 'LangGraph', 'pgvector', 'Titan Embeddings', 'RAG Pipeline'],
+      title: 'AI · LLM 서비스 개발',
+      tagline: 'RAG · 챗봇 · 자동화 에이전트',
+      desc: 'AWS Bedrock · OpenAI 기반 AI 기능을 서비스에 통합합니다. RAG 파이프라인으로 사내 데이터를 학습시켜 챗봇·자동화 에이전트를 구축하고, 효율적인 프롬프트 설계로 API 비용과 연산량을 최소화합니다.',
+      techs: ['AWS Bedrock', 'OpenAI API', 'LangGraph', 'RAG Pipeline', 'pgvector'],
       gradient: 'linear-gradient(135deg, #7c3aed, #ec4899)',
       glowColor: 'rgba(124, 58, 237, 0.25)',
     },
@@ -97,8 +99,8 @@
   <div class="container">
     <div class="section-header" use:reveal>
       <div class="section-label">Services · 기여하는 방법</div>
-      <h2 class="section-title">리소스 최적화,<br />이렇게 실현합니다</h2>
-      <p class="section-desc">Serverless, 오토스케일링, IaC — 낭비를 없애고 효율을 높이는 기술로 기후친화적인 서비스를 만듭니다.</p>
+      <h2 class="section-title">웹, 모바일, 클라우드까지<br />리소스 최적화로 만듭니다</h2>
+      <p class="section-desc">웹 애플리케이션부터 모바일 앱, 클라우드 인프라까지 — 낭비 없는 개발로 더 빠르고 더 친환경적인 서비스를 만듭니다.</p>
     </div>
 
     <div class="services-grid">
